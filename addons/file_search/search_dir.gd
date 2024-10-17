@@ -2,8 +2,7 @@
 extends Node
 
 
-func search_dir(path: String, search_pattern: String = "", recursive: bool = false):
-	search_pattern = "*" if search_pattern == "" else search_pattern
+func search_dir(path: String, search_pattern: String = "*", recursive: bool = false):
 	var dir = DirAccess.open(path)
 
 	if not dir:
